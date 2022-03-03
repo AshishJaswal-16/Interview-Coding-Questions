@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+    int n;
+    char ch[1000];
+    scanf("%d",&n);
+    scanf("%s",ch);
+    // printf("%d is the n\n",n);
+    // printf("%s is the string",ch);
+    int x=strlen(ch);
+    for (int i = strlen(ch)-1; i>=0; i--)
+    {
+        ch[i+n]=ch[i];
+        /* code */
+    }
+    // int x=strlen(ch);
+    // for (int i = 0; i <x; i++)
+    // {
+    //     printf("%c",ch[i]);
+    //     /* code */
+    // }
+    int j=0;
+    for (int i = x; i < strlen(ch); i++)
+    {
+        ch[j]=ch[i];
+        j++;
+
+        /* code */
+    }
+    ch[x]='\0';
+
+    printf("%s",ch);
+
+    
+
+    return 0;
+}
